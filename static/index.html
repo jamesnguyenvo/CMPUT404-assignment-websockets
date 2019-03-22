@@ -55,11 +55,13 @@ function drawCircle(context,entity) {
         //moveTo(x,y);
         fillStyle = entity["colour"];
         strokeStyle = fillStyle;
+        // not randomized in the world so two different windows can display different things
         if (randomShape == 1) {
             rect(x, y, entity["radius"], entity["radius"]);
         } else {
             arc(x, y, (entity["radius"])?entity["radius"]:50, 0, 2.0 * Math.PI, false);  
         }
+        // arc(x, y, (entity["radius"])?entity["radius"]:50, 0, 2.0 * Math.PI, false); 
         stroke();                                
     }
 }
